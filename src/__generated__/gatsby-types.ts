@@ -3148,6 +3148,11 @@ type WebPOptions = {
   readonly quality: Maybe<Scalars['Int']>;
 };
 
+type SITE_METADATA_QUERYQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+type SITE_METADATA_QUERYQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'url' | 'image'>> }> };
+
 type AccountSharingPageQueryVariables = Exact<{
   id: Scalars['String'];
 }>;
@@ -3213,10 +3218,5 @@ type GatsbyImageSharpSizes_withWebp_tracedSVGFragment = Pick<ImageSharpSizes, 't
 type GatsbyImageSharpSizes_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'sizes'>;
 
 type GatsbyImageSharpSizes_withWebp_noBase64Fragment = Pick<ImageSharpSizes, 'aspectRatio' | 'src' | 'srcSet' | 'srcWebp' | 'srcSetWebp' | 'sizes'>;
-
-type SITE_METADATA_QUERYQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type SITE_METADATA_QUERYQuery = { readonly site: Maybe<{ readonly siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'url' | 'image'>> }> };
 
 }
