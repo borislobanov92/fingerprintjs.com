@@ -47,7 +47,7 @@ export default function PriceCalculator() {
             <div className={styles.description}>
               <strong>Select from preset</strong>
             </div>
-            <Select
+            <Select<ValuePreset>
               value={customCount === undefined ? selectedPreset : null}
               options={selectOptions}
               onChange={onPresetSelected}

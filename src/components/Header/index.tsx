@@ -19,6 +19,11 @@ export default function Header() {
   const [isContactSalesModalOpen, setIsContactSalesModalOpen] = useState(false)
 
   useEffect(() => {
+    const clazz = 'isMobileMenuOpen'
+    isBrowser && isMobileMenuOpen ? document.body.classList.add(clazz) : document.body.classList.remove(clazz)
+  }, [isMobileMenuOpen])
+
+  useEffect(() => {
     Prism.highlightAll()
   }, [])
 
@@ -28,7 +33,6 @@ export default function Header() {
 
   const handleOpenMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
-    isBrowser() && document.body.classList.toggle('isMobileMenuOpen')
   }
 
   return (

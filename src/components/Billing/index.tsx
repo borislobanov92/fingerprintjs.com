@@ -5,11 +5,11 @@ import { PaymentType } from '../../types/PaymentType'
 import { handlePriceChange, pricingTable } from '../../utils/pricing'
 import Container from '../common/Container'
 import Section from '../common/Section'
-import styles from './Billing.module.scss'
 import RangeSlider, { SliderValue } from '../common/RangeSlider'
 import Button from '../common/Button'
 import Modal from '../common/Modal'
 import ContactSalesForm from '../ContactSalesForm'
+import styles from './Billing.module.scss'
 
 const sliderConfig = {
   min: 0,
@@ -102,8 +102,8 @@ export default function Billing() {
                 </button>
               </div>
               <p className={styles.description}>
-                With annual pricing you lock in an annual price with a discount by prepaying. This plan is recommended for
-                users with predictable or high traffic volumes.
+                With annual pricing you lock in an annual price with a discount by prepaying. This plan is recommended
+                for users with predictable or high traffic volumes.
               </p>
             </div>
           </div>
