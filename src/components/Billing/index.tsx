@@ -46,10 +46,6 @@ export default function Billing() {
     recalculatePricing(sliderTable[sliderValue].value, paymentType)
   }, [])
 
-  useEffect(() => {
-    document.body.style.overflow = isContactSalesModalOpen ? 'hidden' : 'unset'
-  }, [isContactSalesModalOpen])
-
   return (
     <>
       <Section className={styles.section}>

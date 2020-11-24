@@ -27,10 +27,6 @@ export default function Header() {
     Prism.highlightAll()
   }, [])
 
-  useEffect(() => {
-    document.body.style.overflow = isContactSalesModalOpen ? 'hidden' : 'unset'
-  }, [isContactSalesModalOpen])
-
   const handleOpenMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }

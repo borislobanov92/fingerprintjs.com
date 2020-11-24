@@ -13,10 +13,6 @@ import styles from './MobileNavbar.module.scss'
 export default function MobileNavbar() {
   const [isContactSalesModalOpen, setIsContactSalesModalOpen] = useState(false)
 
-  useEffect(() => {
-    document.body.style.overflow = isContactSalesModalOpen ? 'hidden' : 'unset'
-  }, [isContactSalesModalOpen])
-
   return (
     <>
       <div className={styles.nav}>

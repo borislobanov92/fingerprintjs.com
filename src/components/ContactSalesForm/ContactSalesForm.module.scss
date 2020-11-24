@@ -1,6 +1,5 @@
 .contactSalesForm {
-  min-width: 200px;
-  max-width: 400px;
+  width: 100%;
 
   &.failed {
     --state-color: var(--error);
@@ -44,13 +43,15 @@
 
       border: solid 2px var(--state-color);
       border-radius: $icon-size;
-      margin-top: $icon-size;
+      margin-top: 4rem;
       padding: 1rem;
 
       fill: v('state-color');
     }
 
     .message {
+      margin-top: 5rem;
+      color: c('white');
       font-family: v('ff-mono');
     }
   }
@@ -62,47 +63,46 @@
     align-content: flex-end;
   }
 
-  .label {
-    font-size: 1.5rem;
-    opacity: v('faded');
-
-    & + .label {
-      margin-top: 2rem;
-    }
-  }
-
   .input {
+    align-self: stretch;
+    border: 0;
+    box-shadow: 0 0 0 1px #c4cdd5;
+
     -webkit-appearance: none;
-    background: none;
+    background-color: c('white');
     font-family: v(ff-sans);
     font-size: 2rem;
 
     width: 100%;
-    min-width: 200px;
-    height: 6rem;
-    margin-top: 0.5rem;
-    padding: 0 2rem;
+    min-width: 260px;
+    height: 5rem;
+    padding: 1.5rem;
 
     flex: 1;
     border-radius: 1rem;
-    border: solid 1px adjust-color(c('brand-water'), $alpha: -0.7);
 
+    @media screen and (max-width: 640px) {
+      min-width: 200px;
+    }
 
     &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 2px #393e9e;
       outline: none;
-      border: solid 1px adjust-color(c('brand-water'), $alpha: -0.3);
     }
 
     &::placeholder {
-      color: v('brand-water');
-      opacity: v('extra-faded');
+      color: v('black');
+    }
+
+    & + .input {
+      margin-top: 1.75rem;
     }
   }
 
-
-
   .button {
-    align-self: right;
-    margin-top: 3rem;
+    align-self: flex-end;
+    height: 5rem;
+    margin-top: 1.75rem;
   }
 }

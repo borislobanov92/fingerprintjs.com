@@ -20,10 +20,6 @@ export default function PriceCalculator() {
   const [customCount, setCustomCount] = useState<number | undefined>(undefined)
   const [isContactSalesModalOpen, setIsContactSalesModalOpen] = useState(false)
 
-  useEffect(() => {
-    document.body.style.overflow = isContactSalesModalOpen ? 'hidden' : 'unset'
-  }, [isContactSalesModalOpen])
-
   function onPresetSelected(newPreset: ValuePreset): void {
     setSelectedPreset(newPreset)
 
